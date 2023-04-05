@@ -1,0 +1,47 @@
+.contactForm {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(40px);
+	padding: 2rem;
+	border-radius: 20px;
+}
+
+.errorMessage {
+	color: red;
+}
+
+.circle {
+	position: absolute;
+	bottom: -20px;
+	left: -50px;
+	border-radius: 50%;
+	padding: 4rem;
+	background-color: aliceblue;
+}
+
+.contactForm input {
+	padding: 0.7rem;
+	border: none;
+	border-radius: 20px;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.contactForm textarea {
+	padding: 0.7rem;
+	border: none;
+	border-radius: 20px;
+	min-width: 280px;
+	min-height: 200px;
+}
+
+.contactForm button {
+	cursor: pointer;
+	border: none;
+	padding: 1rem;
+	border-radius: 20px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.8);
+}
