@@ -12,6 +12,8 @@
 }
 
 .socialMediaContainer span {
+	font-size: 4rem;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;

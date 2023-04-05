@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<Record<string, unknown>>({});
+  const [errors, setErrors] = useState<Record<string, boolean>>({});
   //   Setting button text on form submission
   const [buttonText, setButtonText] = useState("Send");
 
@@ -17,7 +17,7 @@ export default function ContactForm() {
 
   // Validation check method
   const handleValidation = () => {
-    let tempErrors: Record<string, unknown> = {};
+    let tempErrors: Record<string, boolean > = {};
     let isValid = true;
 
     if (fullname.length <= 0) {
@@ -93,17 +93,17 @@ export default function ContactForm() {
 	}, [showSuccessMessage])
 
 	return (
-			<form method="POST" className={styles.contactForm} onSubmit={handleSubmit} >
+			<form className={styles.contactForm} onSubmit={handleSubmit} >
 				<input type="text" placeholder="Asunto" value={subject} onChange={e => setSubject(e.target.value)}/>
-				{errors['subject'] && <p className={styles.errorMessage}>El Asunto no puede estar vacio</p>}
+				{errors.subject && <p className={styles.errorMessage}>El Asunto no puede estar vacio</p>}
 				<input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
-				{errors['email'] && <p className={styles.errorMessage} >El email no puede estar vacio</p>}
+				{errors.email && <p className={styles.errorMessage} >El email no puede estar vacio</p>}
 				<input type="text" placeholder="Nombre Completo" value={fullname}  onChange={e => setFullname(e.target.value)} />
-				{errors['fullname'] && <p className={styles.errorMessage}>El campo nombre completo no puede estar vacio</p>}
+				{errors.fullname && <p className={styles.errorMessage}>El campo nombre completo no puede estar vacio</p>}
 				<textarea placeholder="Deja tu mensaje aqui" value={message}  onChange={e => setMessage(e.target.value)}>
 				</textarea>
-				{errors['message'] && <p className={styles.errorMessage} >El mensaje no puede estar vacio</p>}
-				<button type="submit">{buttonText}</button>
+				{errors.message && <p className={styles.errorMessage} >El mensaje no puede estar vacio</p>}
+				<button type="submit" disabled={buttonText === "Sending"} >{buttonText}</button>
 				{showFailureMessage && <p className={styles.errorMessage}>Algo fue mal enviando tu email, intentalo de nuevo mas tarde</p>}
 				{showSuccessMessage && <p>Felicidades, tu email ha sido enviado!</p>}
 			</form>

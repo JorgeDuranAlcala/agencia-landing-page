@@ -250,6 +250,7 @@ a {
 
 
 .cta {
+		cursor: pointer;
     border: none;
     font-weight: bold;
     flex: none;
