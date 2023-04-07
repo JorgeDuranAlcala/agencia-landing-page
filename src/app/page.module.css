@@ -14,7 +14,12 @@
 }
 
 .hero h1 {
-	font-size: 4rem;
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.sectionTitle {
+	font-size: 2rem;
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .btnHero {
@@ -22,7 +27,9 @@
 	cursor: pointer;
 	color: #fff;
 	padding: 1rem;
-	background-color: #000;
+	text-align: center;
+	font-weight: bold;
+	background-color: var(--color1);
 	border-radius: 20px;
 }
 

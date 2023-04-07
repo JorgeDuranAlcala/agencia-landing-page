@@ -8,6 +8,7 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -41,39 +42,14 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-}
+--color1: #1c0b2b ;
+--color2:  #301c41 ;
+--color3: #413b6b ;
+--color4: #5c65c0 ;
+--color5: #6f95ff ;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+--bg-gradient: linear-gradient(172deg, var(--color5) 0%, var(--color2) 100%);
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
 }
 
 * {
@@ -92,7 +68,8 @@ body {
 	font-family: "Montserrat";
   color: rgb(var(--foreground-rgb));
 background: rgb(170,221,246);
-background: linear-gradient(172deg, rgba(170,221,246,1) 0%, rgba(247,139,14,1) 100%);
+/*background: linear-gradient(172deg, rgba(170,221,246,1) 0%, rgba(247,139,14,1) 100%);*/
+background: var(--bg-gradient);
 }
 
 a {
@@ -100,10 +77,12 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.bg-glass {
+		background: rgba(255, 255,255, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+		padding: 1.3rem;
+		transition: ease-in-out all .5s;
 }
 
 .pricing-section {
@@ -256,7 +235,7 @@ a {
     flex: none;
     margin: auto 1em 1em;
     padding: 1.25em 2em;
-    color: #4aa8e4;
+    color: var(--color1);
     background: rgba(255,255,255,0.7);
     border-radius: 5px;
     -webkit-transition: background 0.3s;

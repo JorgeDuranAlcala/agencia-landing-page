@@ -38,10 +38,12 @@
 }
 
 .contactForm button {
+	text-transform: uppercase;
+	font-weight: bold;
 	cursor: pointer;
 	border: none;
 	padding: 1rem;
 	border-radius: 20px;
 	color: rgb(255, 255, 255);
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: var(--color1);
 }

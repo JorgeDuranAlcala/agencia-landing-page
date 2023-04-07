@@ -27,7 +27,7 @@ export default function Home() {
 			</div>
 		 </section>
 		 <section className={styles.servicesSection} id="service">
-				<h3>Our Services</h3>	
+				<h3 className={styles.sectionTitle} >Our Services</h3>	
 				<div className={styles.cardContainer}>
 					<div className={styles.card}>
 						<Image src="/laptop-code.svg" width={80} height={80} alt="laptop-code"/>
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
         </section>
 		 <section className={styles.contactSection} id="contactus">
-			<h3>Contact Us</h3>
+			<h3 className={styles.sectionTitle}>Contact Us</h3>
 				<ContactForm/>
 				</section>
     </main>
