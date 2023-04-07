@@ -47,7 +47,7 @@
 --color3: #413b6b ;
 --color4: #5c65c0 ;
 --color5: #6f95ff ;
-
+--glass-navbar-bg: rgb(28 11 43 / 75%);
 --bg-gradient: linear-gradient(172deg, var(--color5) 0%, var(--color2) 100%);
 
 }
@@ -60,6 +60,7 @@
 
 html,
 body {
+	scroll-behavior: smooth;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -78,11 +79,11 @@ a {
 }
 
 .bg-glass {
-		background: rgba(255, 255,255, 0.7);
+		background: var(--glass-navbar-bg);
     backdrop-filter: blur(10px);
     z-index: 99;
-		padding: 1.3rem;
-		transition: ease-in-out all .5s;
+		padding: 1.2rem !important;
+		transition: ease-in-out all .2s;
 }
 
 .pricing-section {
@@ -186,7 +187,6 @@ a {
     padding: 0.5em 0 0 0;
     font-weight: 400;
     position: relative;
-    z-index: 100;
 }
 
 .currency {
